@@ -105,4 +105,6 @@ C:\Users\r_med\source\repos\SaleMasterApi\SaleMasterApi\obj\Debug\net8.0\refint\
 C:\Users\r_med\source\repos\SaleMasterApi\SaleMasterApi\obj\Debug\net8.0\SaleMasterApi.pdb
 C:\Users\r_med\source\repos\SaleMasterApi\SaleMasterApi\obj\Debug\net8.0\SaleMasterApi.genruntimeconfig.cache
 C:\Users\r_med\source\repos\SaleMasterApi\SaleMasterApi\obj\Debug\net8.0\ref\SaleMasterApi.dll
+C:\Users\r_med\source\repos\SaleMasterApi\SaleMasterApi\bin\Debug\net8.0\Desafio SaleMaster.postman_collection.json
+C:\Users\r_med\source\repos\SaleMasterApi\SaleMasterApi\obj\Debug\net8.0\SaleMasterApi.sourcelink.json
 C:\Users\r_med\source\repos\SaleMasterApi\SaleMasterApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

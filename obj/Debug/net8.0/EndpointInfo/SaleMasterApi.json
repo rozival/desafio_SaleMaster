@@ -130,6 +130,68 @@
         }
       }
     },
+    "/api/produtos/{id}/incrementar-estoque": {
+      "post": {
+        "tags": [
+          "Produtos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "quantidade",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/produtos/{id}/decrementar-estoque": {
+      "delete": {
+        "tags": [
+          "Produtos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "quantidade",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/ping": {
       "get": {
         "tags": [
@@ -191,6 +253,28 @@
   },
   "components": {
     "schemas": {
+      "Caracteristica": {
+        "type": "object",
+        "properties": {
+          "cor": {
+            "type": "string",
+            "nullable": true
+          },
+          "tamanho": {
+            "type": "string",
+            "nullable": true
+          },
+          "material": {
+            "type": "string",
+            "nullable": true
+          },
+          "marca": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Produto": {
         "type": "object",
         "properties": {
@@ -209,6 +293,9 @@
           "estoque": {
             "type": "integer",
             "format": "int32"
+          },
+          "caracteristica": {
+            "$ref": "#/components/schemas/Caracteristica"
           }
         },
         "additionalProperties": false

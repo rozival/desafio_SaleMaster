@@ -55,5 +55,18 @@ namespace SaleMasterApi.Services
             var produto = await BuscarAsync(id);
             await _repo.RemoverAsync(produto);
         }
+
+        public async Task IncrementarEstoqueAsync(int id, int quantidade)
+        {
+            var produto = await BuscarAsync(id);
+            produto.IncrementarEstoque(quantidade);
+            await _repo.AtualizarAsync(produto);
+        }
+        public async Task DecrementarEstoqueAsync(int id, int quantidade)
+        {
+            var produto = await BuscarAsync(id);
+            produto.DecrementarEstoque(quantidade);
+            await _repo.AtualizarAsync(produto);
+        }
     }
 }

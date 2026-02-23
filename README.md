@@ -60,11 +60,15 @@ PUT /api/produtos/{id}
 
 DELETE /api/produtos/{id}
 
+POST /api/incrementar-estoque/{id}
+
+DELETE /api/decrementar-estoque/{id}
+
 # Testes
 
 Uma collection do Postman está incluída no arquivo:
 
-SaleMasterApi.postman_collection.json
+Desafio SaleMaster.postman_collection.json
 
 
 

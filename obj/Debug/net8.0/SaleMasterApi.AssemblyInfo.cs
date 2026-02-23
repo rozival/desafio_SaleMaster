@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SaleMasterApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+923ec0b73923c63cec892b3065ce5bb528b560fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d442731861a4e882b992a15dd9a5da69fa91d8d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("SaleMasterApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SaleMasterApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

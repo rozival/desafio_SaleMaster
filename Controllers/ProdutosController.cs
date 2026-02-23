@@ -43,5 +43,17 @@ namespace SaleMasterApi.Controllers
             await _service.RemoverAsync(id);
             return NoContent();
         }
+        [HttpPost("{id}/incrementar-estoque")]
+        public async Task<IActionResult> IncrementarEstoque(int id, [FromQuery] int quantidade)
+        {
+            await _service.IncrementarEstoqueAsync(id, quantidade);
+            return NoContent();
+        }
+        [HttpDelete("{id}/decrementar-estoque")]
+        public async Task<IActionResult> DecrementarEstoque(int id, [FromQuery] int quantidade)
+        {
+            await _service.DecrementarEstoqueAsync(id, quantidade);
+            return NoContent();
+        }
     }
 }

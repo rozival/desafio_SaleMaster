@@ -37,5 +37,25 @@ namespace SaleMasterApi.Repositories
             _context.Produtos.Remove(produto);
             await _context.SaveChangesAsync();
         }
+        public async Task IncrementarEstoqueAsync(int id, int quantidade)
+        {
+            var produto = await ObterPorIdAsync(id);
+            if (produto == null) throw new Exception("Produto não encontrado");
+            if (quantidade < 0)
+                throw new ArgumentException("Quantidade deve ser positiva", nameof(quantidade));
+            produto.IncrementarEstoque(quantidade);
+            await AtualizarAsync(produto);
+        }
+        public async Task DecrementarEstoqueAsync(int id, int quantidade)
+        {
+            var produto = await ObterPorIdAsync(id);
+            if (produto == null) throw new Exception("Produto não encontrado");
+            if (quantidade < 0)
+                throw new ArgumentException("Quantidade deve ser positiva", nameof(quantidade));
+            if (quantidade > produto.Estoque)
+                throw new InvalidOperationException("Não é possível decrementar mais do que o estoque disponível");
+            produto.DecrementarEstoque(quantidade);
+            await AtualizarAsync(produto);
+        }
     }
 }

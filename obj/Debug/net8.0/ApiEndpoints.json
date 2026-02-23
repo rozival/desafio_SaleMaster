@@ -79,6 +79,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SaleMasterApi.Controllers.ProdutosController",
+    "Method": "DecrementarEstoque",
+    "RelativePath": "api/produtos/{id}/decrementar-estoque",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "quantidade",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SaleMasterApi.Controllers.ProdutosController",
+    "Method": "IncrementarEstoque",
+    "RelativePath": "api/produtos/{id}/incrementar-estoque",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "quantidade",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Program\u002B\u003C\u003Ec",
     "Method": "\u003C\u003CMain\u003E$\u003Eb__0_1",
     "RelativePath": "ping",
